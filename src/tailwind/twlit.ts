@@ -592,7 +592,7 @@ video {
   display: none;
 }
 
-.h-1\\/2 {
+.h-1\/2 {
   height: 50%;
 }
 
@@ -604,7 +604,7 @@ video {
   height: 100%;
 }
 
-.w-3\\/4 {
+.w-3\/4 {
   width: 75%;
 }
 
