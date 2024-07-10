@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es2021",
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "target": "es2017",
+    "module": "es2015",
+    "moduleResolution": "node",
     "noEmitOnError": true,
     "lib": ["es2021", "dom", "DOM.Iterable"],
     "strict": true,
@@ -15,7 +15,7 @@
     "inlineSources": true,
     "rootDir": "./",
     "incremental": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
   },
   "include": ["**/*.ts"]
 }
