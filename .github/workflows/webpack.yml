@@ -25,4 +25,5 @@ jobs:
     - name: Build
       run: |
         npm install
-        tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"web-dev-server\"
+        tsc
+        web-dev-server
