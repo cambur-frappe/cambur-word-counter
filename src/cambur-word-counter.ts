@@ -11,9 +11,11 @@ export class CamburWordCounter extends LitElement {
 
   render() {
     return html`
-      <div id="wrapper" class="flex flex-col items-center h-full">
+      <div id="wrapper" class="flex flex-col justify-around items-center h-full">
         <div id="counter" class="flex-auto grow-0">
-          <p>
+          <p
+            class="text-center text-lg font-semibold text-gray-800"
+          >
             ${this.countWords(this.words)} words
             ${this.countCharacters(this.words)} characters
             ${this.calcReadingTime(this.words)} minutes reading time
@@ -24,17 +26,23 @@ export class CamburWordCounter extends LitElement {
             this.words = (event.target as HTMLTextAreaElement).value;
           }}
           id="main-textarea"
-          class="flex-auto w-3/4"
+          class="flex w-3/4 h-3/4 px-3 py-1.5 border border-gray-300 rounded-md"
           style="resize: none;"
           autofocus
           placeholder="Write to start counting..."
         ></textarea>
+        <footer
+          id="footer"
+          class="flex justify-center items-center w-full h-12 bg-gray-100"
+        >
+          Made with 💙 by Frappé Team 🍧
+        </footer>
       </div>
     `;
   }
 
   countWords(text: string): number {
-    return text.split(" ").length;
+    return text.split(new RegExp("\\s[^\\s]")).length;
   }
 
   countCharacters(text: string): number {
