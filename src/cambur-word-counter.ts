@@ -1,11 +1,17 @@
 import { html, LitElement } from "lit";
-import { customElement, property } from "lit/decorators.js";
 import { TWStyles } from "./tailwind/twlit";
 
-@customElement("cambur-word-counter")
 export class CamburWordCounter extends LitElement {
-  @property()
-  words: string = "";
+  words: string;
+  
+  static get properties() {
+    return { words: { type: String }, };
+  }
+
+  constructor() {
+    super();
+    this.words = "";
+  }
 
   static styles = TWStyles;
 
@@ -54,3 +60,5 @@ export class CamburWordCounter extends LitElement {
     return Math.ceil(words / 200);
   }
 }
+
+customElements.define("cambur-word-counter", CamburWordCounter);
