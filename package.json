@@ -8,7 +8,7 @@
   "scripts": {
     "analyze": "cem analyze --litelement",
     "dev-vite": "vite",
-    "build-vite": "vite build",
+    "build": "vite build",
     "serve": "vite preview",
     "dev": "concurrently \"tailwindcss -i ./src/tailwind/tailwindlib.css -o ./src/tailwind/tw.css --watch\" \"twlit --input ./src/tailwind/tw.css --output ./src/tailwind/twlit.ts\"",
     "start": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"web-dev-server\""
